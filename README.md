@@ -12,7 +12,7 @@
 Built a Rock Paper Scissor Game using JavaScript.
 Play the ultimate Rock Paper Scissors Game! HTML, CSS, and JavaScript combine for a captivating experience. Challenge the computer, strategize your moves, and claim victory!
 
-<a href="https://rockpaperscissor-jrpranav.netlify.app/"><strong>➥ Play Now</strong></a>
+<a href="https://codeaashu.github.io/Rock-Paper-Scissor-Game/"><strong>➥ Play Now</strong></a>
 
 </div>
 
