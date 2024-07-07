@@ -1,0 +1,162 @@
+/* --- Google Font: Poppins --- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* --- Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  background-repeat: no-repeat;
+}
+::selection {
+  color: #fff;
+  background-color: #7d2ae8;
+}
+
+/* --- Parent Container --- */
+.container {
+  background-color: #fff;
+  padding: 2rem 7rem;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* -- Result Box -- */
+.resultImgs {
+  display: flex;
+  column-gap: 7rem;
+}
+.resultImgs img {
+  width: 100px;
+}
+.userResult img {
+  transform: rotate(90deg);
+}
+.cpuResult img {
+  transform: rotate(-90deg) rotateY(180deg);
+}
+.resultText {
+  text-align: center;
+  font-size: 2rem;
+  color: #7d2ae8;
+  margin-top: 1.5rem;
+}
+
+/* --- Animations on Result Image --- */
+.container.start .userResult {
+  transform-origin: left;
+  animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+  50% {
+    transform: rotate(10deg);
+  }
+}
+.container.start .cpuResult {
+  transform-origin: right;
+  animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* -- Options Box -- */
+.optionsBox img {
+  width: 50px;
+}
+.optionsBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+.container.start .optionsBox,
+.optionImg img {
+  pointer-events: none;
+}
+.optionImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.optionImg:hover,
+.optionImg:active {
+  opacity: 1;
+}
+.optionImg p {
+  color: #7d2ae8;
+  font-size: 1.235rem;
+  margin-top: 1rem;
+  pointer-events: none;
+}
+
+/* --- Media Queries --- */
+
+/* Below 546px */
+@media only screen and (max-width: 546px) {
+  .container {
+    padding: 2rem 3rem;
+  }
+  .resultImgs {
+    justify-content: center;
+    column-gap: 6.5rem;
+  }
+  .resultImgs img {
+    width: 70px;
+  }
+  .optionsBox {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  .optionsBox img {
+    width: 35px;
+  }
+  .optionImg {
+    margin-top: 1rem;
+  }
+}
+
+/* Below 375px */
+@media only screen and (max-width: 375px) {
+  .container {
+    padding: 2rem 2.5rem;
+  }
+  .resultImgs {
+    column-gap: 5.4rem;
+  }
+  .optionsBox img {
+    width: 30px;
+  }
+}
+
+/* Below 330px */
+@media only screen and (max-width: 330px) {
+  .container {
+    padding: 1.5rem 2rem;
+  }
+  .resultImgs {
+    column-gap: 4.5rem;
+  }
+  .resultImgs img {
+    width: 60px;
+  }
+  .optionsBox img {
+    width: 30px;
+  }
+}
